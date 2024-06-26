@@ -1,0 +1,38 @@
+* {
+  --width: 100px;
+  --height: 26px;
+  --width-factor: 0.1; /* 10% */
+  --height-factor: 0.25; /* 4% */
+
+  --small-width: calc(var(--width) * var(--width-factor));
+  --small-height: calc(var(--height) * var(--height-factor));
+}
+
+.segment {
+  width: var(--width);
+  height: var(--height);
+  clip-path: polygon(
+    /* Esquina superior izquierda */
+    /* Arriba, izquierda */
+    var(--small-width) 0, 
+    /* Arriba, derecha */
+    calc(var(--width) - var(--small-width)) 0, 
+
+    /* Esquina superior derecha */
+    /* Derecha, arriba */
+    var(--width) var(--small-height), 
+    /* Derecha, abajo */
+    var(--width) calc(var(--height) - var(--small-height)), 
+
+    /* Esquina inferior derecha */
+    /* Abajo, derecha */
+    calc(var(--width) - var(--small-width)) var(--height), 
+    /* Abajo, izquierda */
+    var(--small-width) var(--height), 
+
+    /* Esquina inferior izquierda */
+    /* Izquierda, abajo */
+    0 calc(var(--height) - var(--small-height)), 
+    /* Izquierda, arriba */
+    0 var(--small-height))
+}
