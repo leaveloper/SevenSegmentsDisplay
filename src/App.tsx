@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Display />
+      <Display number={0}/>
     </>
   )
 }
