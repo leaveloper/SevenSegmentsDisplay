@@ -4,9 +4,9 @@ import './App.css'
 function App() {
 
   return (
-    <>
-      <Display number={0}/>
-    </>
+    <div id="display">
+      <Display number={8}/>
+    </div>
   )
 }
 

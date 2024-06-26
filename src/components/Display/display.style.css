@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto auto auto;
-  gap: 40px;
+  gap: 37px;
+  width: 170px;
+  justify-content: center;
 }
 
 .segment-on {
@@ -12,17 +14,14 @@
 .segment-on::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  border: 5px solid rgb(240, 56, 0);
+  border: 5px solid rgb(219, 51, 0);
   clip-path: inherit;
   box-sizing: border-box;
 }
 
 .segment-off {
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(219, 219, 219);
 }
 
 .segment-1 {
